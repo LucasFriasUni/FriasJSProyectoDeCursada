@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(./Assets/BgMobile.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 3fr 1000px auto;
+    grid-template-areas:
+        "nav"
+        "header" 
+        "section" 
+        "footer";
+    color: white;
+}
+
+nav {
+    grid-area: nav;
+    width: 100%;
+    background: white;
+    border-bottom: gray solid 1px;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+nav li {
+    padding-top: 0.3em;
+    border: black solid 1px;
+    padding: 12px;
+}
+nav ul {
+    width: 100%;
+    
+}
+nav ul a {
+
+    font-size: 1.3em;
+    flex-grow: 1;
+    flex-basis: 0; /*Con flex-grow y flex basis reparto el contenido de la nav de manera pareja horizontalmente*/
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    transition: 0.4ms ease;
+}
+nav ul a:hover{
+    transition: 0.4ms ease;
+    color: black;
+    background: white;
+}
+
+
+
+header {
+    grid-area: header;
+    padding-top: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20%;
+    text-align: center;
+    /*background-color: hsla(360, 100%, 97%, 0.43);*/
+    
+}
+header h1 {
+    
+    padding-top: 5%;
+    height: 30%;
+    font-size: 2em;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    text-shadow: black 2px 2px 2px;
+    letter-spacing: 0.20em;
+    
+}
+header p {
+    padding-top: 10%;
+    margin-top: 0%;
+    color: white;
+    font-size: 1.4em;
+    text-shadow: black 1px 1px 1px;
+    padding-bottom: 20%;
+    letter-spacing: 0.17em;
+}
+
+
+.indexSection {
+    grid-area: section;
+    
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        ". subt ."
+        ". card1 ."
+        ". card2 ."
+        ". card3 .";
+    row-gap: 8%;
+    padding-bottom: 2em;
+}
+section > p{
+    grid-area: subt;
+    font-size: 1.2em;
+    letter-spacing: 0.17em;
+}
+section div a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 16px;
+    border: gray solid 1px;
+    border-radius: 10px;
+    width: 6ch;
+    height: 6ch;
+    color: black;
+    background-color: white;
+}
+section div a:hover {
+    background-color: red;
+    color: white;
+}
+.card {
+    background: rgba(56, 0, 0, 0.5);
+    border-radius: 1em;
+    box-shadow:  gray 4px 4px 4px ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.cardTienda{
+    grid-area: card1;
+}
+.cardProyectos{
+    grid-area: card2;
+}
+.cardGaleria{
+    grid-area: card3;
+}
+.tienda {
+    grid-area: section;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+    row-gap: 8%;
+    padding-bottom: 2em;
+    grid-template-areas: 
+    ". subt ."
+    ". card4 ."
+    ". card5 ."
+    ". card6 ."
+    ". card7 .";
+}
+.cardSillas{
+    grid-area: card4;
+
+}
+.cardMesas{
+    grid-area: card5;
+
+}
+.cardSillones{
+    grid-area: card6;
+
+}
+.cardEscritorios{
+    grid-area: card7;
+
+}
+.card p {
+    display: inline-block;
+    height: auto;
+    color: white;
+    text-shadow: black 1px 1px 1px;
+    position: relative;
+    top: 80%;
+    width: 100%;
+    background-color: #121212;
+}
+
+
+.sillas {
+    grid-area: section;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 49% 49%;
+    grid-template-rows:  1fr 1fr 1fr 1fr;
+    grid-row-gap: 2%;
+    grid-column-gap: 2%;
+    grid-template-areas:
+    "titulo titulo" 
+    "silla1 silla2"
+    "silla3 silla4"
+    "silla5 silla6";
+    padding-bottom: 2em;
+}
+.sillas h3{
+    grid-area:titulo;
+    text-align: center;
+    text-shadow: #121212 2px 2px 2px;
+    font-size: 3em;
+}
+.sillas p{
+    text-align: center;
+}
+.silla1{
+    grid-area: silla1;
+}
+.silla2{
+    grid-area: silla2;   
+}
+.silla3{
+    grid-area: silla3;
+}
+.silla4{
+    grid-area: silla4;  
+}
+.silla5{
+    grid-area: silla5;
+}
+.silla6{
+    grid-area: silla6;
+}
+.sillones{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.add{
+    padding: 1em;
+}
+.add:hover{
+    background-color: aliceblue;
+    color: #121212;
+
+}
+footer {
+    grid-area: footer;
+    background: #121212;
+    text-align: center;
+    width: auto;
+    height: fit-content;
+    padding: 4%;
+    font-size: 1.6em;
+}
+footer h5 {
+    background: #121212;
+    padding: 4%;
+}
+footer ul {
+    padding: 4%;
+    background: black;
+    width: 100%;
+    height: auto;
+}
+footer ul li{
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+@media  screen and (min-width: 768px)  {
+    body{
+        background-image: url(./Assets/BgDestktop.jpg);
+    }
+}
